@@ -20,7 +20,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent
-  ],
+   ],
   imports: [
     BrowserModule
   ],
