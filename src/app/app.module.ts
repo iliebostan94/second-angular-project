@@ -11,7 +11,6 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-it
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
-import { StockchangeTableComponent } from './app/shopping-list/stockchange-table/stockchange-table.component';
 import { StockChangeTableComponent } from './shopping-list/stock-change-table/stock-change-table.component';
 
 @NgModule({
@@ -25,7 +24,6 @@ import { StockChangeTableComponent } from './shopping-list/stock-change-table/st
     ShoppingListComponent,
     ShoppingEditComponent,
     BasicHighlightDirective,
-    StockchangeTableComponent,
     StockChangeTableComponent
    ],
   imports: [

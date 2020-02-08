@@ -15,6 +15,7 @@ export class Ingredient {
     constructor(public name: string, public amount: number) {}
 }
 export class Product {
+  updatedstockvalue: any;
     constructor(public id: string, public title: string, public price: number, public stock: number) {}
 }
 

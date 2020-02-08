@@ -14,7 +14,7 @@ export class StockChangeTableComponent implements OnChanges {
 
   color: string;
   updatedstockvalue: number;
-  productToUpdate: any;
+  // productToUpdate: any;
   stockValueChanged() {
     this.stockValueChange.emit({id: this.productId, updatedstockvalue: this.updatedstockvalue});
     this.updatedstockvalue = null;

@@ -9,6 +9,7 @@ import { Product } from '../recipes/recipe-list/shared/ingredient.model';
   styleUrls: ['./shopping-list.component.css']
 })
 export class ShoppingListComponent implements OnInit {
+  title = 'Stock table';
   productToUpdate: any;
   ingredients: Ingredient[] = [
     new Ingredient('Apples', 5),
@@ -32,9 +33,9 @@ export class ShoppingListComponent implements OnInit {
     this.ingredients.push(ingredient);
   }
 
-  changeStockValue(p: Product) {
+  changeStockValue(p) {
         this.productToUpdate = this.products.find(this.findProducts, [p.id]);
-     //   this.productToUpdate.stock = this.productToUpdate.stock + p.updatedstockvalue;
+        this.productToUpdate.stock = this.productToUpdate.stock + p.updatedstockvalue;
      }
      findProducts(p) {
        return p.id === this[0];
