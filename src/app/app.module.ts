@@ -12,6 +12,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
 import { StockChangeTableComponent } from './shopping-list/stock-change-table/stock-change-table.component';
+import { BetterHighlightDirective } from './directives/better-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { StockChangeTableComponent } from './shopping-list/stock-change-table/st
     ShoppingListComponent,
     ShoppingEditComponent,
     BasicHighlightDirective,
-    StockChangeTableComponent
+    StockChangeTableComponent,
+    BetterHighlightDirective
    ],
   imports: [
     BrowserModule,
