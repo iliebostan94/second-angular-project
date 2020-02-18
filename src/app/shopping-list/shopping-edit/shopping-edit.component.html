@@ -18,8 +18,14 @@
                     <button type="button" class="btn btn-primary mr-3">Clear</button>
 
                     <h4 appBasicHighligh>Test unit for created Directive</h4>
-                    <h4 appBetterHighlight>Test this unit with appBetterHighlight Directive! </h4>
-
+                    <h4 appBetterHighlight defaultColor="lightcoral" [highlightColor]="'olivedrab'">Test this unit with appBetterHighlight Directive! </h4>
+                                            <!-- noSquareBrackets = "string" or [squareBrackets] = "'string'" -->
+                    <div [ngSwitch]="value">
+                    <p *ngSwitchCase="5">Value is 5</p>
+                    <p *ngSwitchCase="10">Value is 10</p>
+                    <p *ngSwitchCase="100">Value is 100</p>
+                    <p *ngSwitchDefault>Value is default</p>
+                    </div>                       
                 </div>
             </div>
         </form>

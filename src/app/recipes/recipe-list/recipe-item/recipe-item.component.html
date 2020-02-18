@@ -1,7 +1,7 @@
-<a href="#" class="list-group-item clearfix bg-light"
+<a [routerLink]="" class="list-group-item clearfix bg-light"
 (click)="onSelected()">
    <div class="float-left">
-       <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+       <h4 class="list-group-item-heading">{{ recipe.id }}. {{ recipe.name }}</h4>
        <p class="list-group-item-text">{{ recipe.description }}</p>
    </div>
    <span class="float-right">

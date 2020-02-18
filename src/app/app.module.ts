@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header-component/header.component';
@@ -13,7 +14,18 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
 import { StockChangeTableComponent } from './shopping-list/stock-change-table/stock-change-table.component';
 import { BetterHighlightDirective } from './directives/better-highlight.directive';
+import { DropdownDirective } from './directives/dropdown.directive';
+import { PlayPoolComponent } from './play-pool/play-pool.component';
+import { LoggingServiceComponent } from './play-pool/logging-service/logging-service.component';
 
+
+const appRoutes: Routes = [
+{  path: 'play-pool', component: PlayPoolComponent, },
+{  path: 'recipes', component: RecipesComponent, },
+{  path: 'recipes/:id', component: RecipeDetailComponent, },
+{  path: 'shopping-list', component: ShoppingListComponent, }
+
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,11 +38,17 @@ import { BetterHighlightDirective } from './directives/better-highlight.directiv
     ShoppingEditComponent,
     BasicHighlightDirective,
     StockChangeTableComponent,
-    BetterHighlightDirective
+    BetterHighlightDirective,
+    DropdownDirective,
+    PlayPoolComponent,
+    LoggingServiceComponent,
    ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(
+      appRoutes
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
