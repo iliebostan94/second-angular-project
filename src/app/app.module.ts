@@ -17,6 +17,8 @@ import { BetterHighlightDirective } from './directives/better-highlight.directiv
 import { DropdownDirective } from './directives/dropdown.directive';
 import { PlayPoolComponent } from './play-pool/play-pool.component';
 import { LoggingServiceComponent } from './play-pool/logging-service/logging-service.component';
+import { NewAccountComponent } from './play-pool/logging-service/new-account/new-account.component';
+import { AccountComponent } from './play-pool/logging-service/account/account.component';
 
 
 const appRoutes: Routes = [
@@ -42,6 +44,8 @@ const appRoutes: Routes = [
     DropdownDirective,
     PlayPoolComponent,
     LoggingServiceComponent,
+    NewAccountComponent,
+    AccountComponent,
    ],
   imports: [
     BrowserModule,
