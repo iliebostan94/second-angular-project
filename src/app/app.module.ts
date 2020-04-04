@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header-component/header.component';
@@ -19,7 +20,6 @@ import { PlayPoolComponent } from './play-pool/play-pool.component';
 import { LoggingServiceComponent } from './play-pool/logging-service/logging-service.component';
 import { NewAccountComponent } from './play-pool/logging-service/new-account/new-account.component';
 import { AccountComponent } from './play-pool/logging-service/account/account.component';
-
 
 const appRoutes: Routes = [
 {  path: 'play-pool', component: PlayPoolComponent, },
@@ -50,11 +50,11 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(
       appRoutes
     )
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
