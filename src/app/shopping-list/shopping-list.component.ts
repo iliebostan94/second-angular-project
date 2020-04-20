@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Ingredient } from '../recipes/recipe-list/shared/ingredient.model';
 import { Product } from '../recipes/recipe-list/shared/ingredient.model';
+import { ShoppingListService } from './shopping-list.service';
 
 @Component({
   selector: 'app-shopping-list',
@@ -11,11 +12,11 @@ import { Product } from '../recipes/recipe-list/shared/ingredient.model';
 export class ShoppingListComponent implements OnInit {
   title = 'Stock table';
   productToUpdate: any;
-  ingredients: Ingredient[] = [
-    new Ingredient('Apples', 5),
-    new Ingredient('Bananas', 6),
+  ingredients: Ingredient[];
+  //   new Ingredient('Apples', 5),
+  //   new Ingredient('Bananas', 6),
+  // ];
 
-  ];
   products: Product[] = [
     new Product( '1', 'Screw Driver', 50, 4),
     new Product( '2', 'Axe', 80, 6),
@@ -24,14 +25,20 @@ export class ShoppingListComponent implements OnInit {
   ];
 
 
-  constructor() { }
+  constructor(private slService: ShoppingListService) { }
   ngOnInit() {
-
+    this.ingredients = this.slService.getIngredients();
+    this.slService.ingredientsChanged
+    .subscribe(
+      (ingredients: Ingredient[]) => {
+        this.ingredients = ingredients;
+      }
+    );
   }
 
-  onIngredientAdded(ingredient: Ingredient) {
-    this.ingredients.push(ingredient);
-  }
+  // onIngredientAdded(ingredient: Ingredient) {
+  //   this.ingredients.push(ingredient);
+  // }
 
   changeStockValue(p) {
         this.productToUpdate = this.products.find(this.findProducts, [p.id]);

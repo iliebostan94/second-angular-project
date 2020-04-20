@@ -20,6 +20,7 @@ import { PlayPoolComponent } from './play-pool/play-pool.component';
 import { LoggingServiceComponent } from './play-pool/logging-service/logging-service.component';
 import { NewAccountComponent } from './play-pool/logging-service/new-account/new-account.component';
 import { AccountComponent } from './play-pool/logging-service/account/account.component';
+import { ShoppingListService } from './shopping-list/shopping-list.service';
 
 const appRoutes: Routes = [
 {  path: 'play-pool', component: PlayPoolComponent, },
@@ -55,6 +56,7 @@ const appRoutes: Routes = [
       appRoutes
     )
   ],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
