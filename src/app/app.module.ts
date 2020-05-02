@@ -21,11 +21,13 @@ import { LoggingServiceComponent } from './play-pool/logging-service/logging-ser
 import { NewAccountComponent } from './play-pool/logging-service/new-account/new-account.component';
 import { AccountComponent } from './play-pool/logging-service/account/account.component';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { RecipeCommentComponent } from './recipes/recipe-detail/recipe-comment/recipe-comment.component';
 
 const appRoutes: Routes = [
 {  path: 'play-pool', component: PlayPoolComponent, },
 {  path: 'recipes', component: RecipesComponent, },
 {  path: 'recipes/:id', component: RecipeDetailComponent, },
+{  path: 'recipes/:id/:name', component: RecipeCommentComponent, },
 {  path: 'shopping-list', component: ShoppingListComponent, }
 
 ];
@@ -47,6 +49,7 @@ const appRoutes: Routes = [
     LoggingServiceComponent,
     NewAccountComponent,
     AccountComponent,
+    RecipeCommentComponent,
    ],
   imports: [
     BrowserModule,

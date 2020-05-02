@@ -12,6 +12,21 @@ import { Observable } from 'rxjs';
 export class RecipeDetailComponent implements OnInit {
   @Input() recipe: Recipe;
 
+  users = [
+    {
+      name: 'Jenn',
+      rating: 5
+    },
+    {
+      name: 'Alex',
+      rating: 4
+    },
+    {
+      name: 'Tania',
+      rating: 5
+    },
+  ];
+
   constructor(private route: ActivatedRoute,
               private router: Router,
               private recipesService: RecipesService) {}
@@ -27,6 +42,11 @@ export class RecipeDetailComponent implements OnInit {
   onAddToShoppingList() {
      this.recipesService.addIngredientsToShoppingList(this.recipe.ingredients);
 
+  }
+  onLoadShoppingList() {
+     this.router.navigate(['/shopping-list']);
+    // or
+    // this.router.navigate(['shopping-list'], {relativeTo: this.route});
   }
 
 }

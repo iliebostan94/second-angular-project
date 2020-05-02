@@ -17,7 +17,7 @@
                 Manage Recipe
               </button> -->
         <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> -->
-            <a (click)="onAddToShoppingList()" style= "cursor: pointer;">To Shopping List</a>
+            <a (click)="onAddToShoppingList()" style= "cursor: pointer; color:darkolivegreen; text-decoration: underline; margin-right: 10px;; ">To Shopping List</a>
             <a href="/recipes">Edit Recipe</a>
             <a href="/recipes">Delete Recipe</a>
         <!-- </div> -->
@@ -28,6 +28,8 @@
     <div class="row">
         <div class="col-md-12">
             {{ recipe.description }}
+            <br> 
+            <button class="btn btn-info" (click)="onLoadShoppingList()">Check the Shopping List</button>
         </div>
     </div>
 
@@ -42,4 +44,21 @@
 
             </ul>
         </div>
+    </div> <br> <br>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Comments on the recipe</h2><br>
+            <app-recipe-comment></app-recipe-comment>
+            <hr>
+            <li 
+            class="list-group-item"
+            *ngFor = 'let user of users'>
+            <p>User {{ user.name }} likes this recipe.</p>
+<p>User {{ user.name }} rated with {{ user.rating }} stars this recipe</p>
+            <!-- {{ user.name }} - {{ user.rating }} -->
+            </li>
+            
+         </div>
     </div>
