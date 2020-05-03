@@ -9,7 +9,8 @@ import { ShoppingListService } from '../shopping-list/shopping-list.service';
 })
 export class RecipesService {
   recipes: Recipe[] = [
-    new Recipe(1,
+    new Recipe(
+      1,
       'A test recipe',
     'Just a test here for now',
      // tslint:disable-next-line:max-line-length
@@ -19,7 +20,8 @@ export class RecipesService {
        new Ingredient ('French Fries', 20)
      ]),
 
-    new Recipe(2,
+    new Recipe(
+      2,
       'A second cool recipe',
     'Another description for recipe',
      // tslint:disable-next-line:max-line-length

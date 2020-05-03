@@ -1,5 +1,11 @@
-<p>User with {{ user.name }} likes this recipe.</p>
-<p>User with {{ user.name }} rated with {{ user.rating }} stars this recipe</p>
+<p>User with name {{ user.name }} likes this recipe.</p>
+<p>User with name {{ user.name }} rated with {{ user.rating }} stars this recipe</p><br>
+<button class="btn btn-secondary" routerLink="/single-comment" routerLinkActive="active" >Read comment</button> <br>
 
+
+
+
+
+<a [routerLink]="['/recipes', id ,'Anna', 5 ]">Load Anna's comment</a><br>
 <hr>
-<a [routerLink]="['/recipes','Anna', 5]">Load Anna's comment</a>
+<a [routerLink]="['/recipes', id ,'Dan', 3 ]">Load Dan's comment</a><br>

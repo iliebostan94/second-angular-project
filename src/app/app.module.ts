@@ -22,12 +22,15 @@ import { NewAccountComponent } from './play-pool/logging-service/new-account/new
 import { AccountComponent } from './play-pool/logging-service/account/account.component';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { RecipeCommentComponent } from './recipes/recipe-detail/recipe-comment/recipe-comment.component';
+import { SingleCommentComponent } from './recipes/recipe-detail/recipe-comment/single-comment/single-comment.component';
 
 const appRoutes: Routes = [
 {  path: 'play-pool', component: PlayPoolComponent, },
 {  path: 'recipes', component: RecipesComponent, },
 {  path: 'recipes/:id', component: RecipeDetailComponent, },
 {  path: 'recipes/:id/:name', component: RecipeCommentComponent, },
+{  path: 'recipes/:id/:name/:rating', component: RecipeCommentComponent, },
+{  path: 'single-comment', component: SingleCommentComponent, },
 {  path: 'shopping-list', component: ShoppingListComponent, }
 
 ];
@@ -50,6 +53,7 @@ const appRoutes: Routes = [
     NewAccountComponent,
     AccountComponent,
     RecipeCommentComponent,
+    SingleCommentComponent,
    ],
   imports: [
     BrowserModule,
