@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
@@ -23,17 +22,22 @@ import { AccountComponent } from './play-pool/logging-service/account/account.co
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { RecipeCommentComponent } from './recipes/recipe-detail/recipe-comment/recipe-comment.component';
 import { SingleCommentComponent } from './recipes/recipe-detail/recipe-comment/single-comment/single-comment.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AppRoutingModule } from './app-routing-module';
 
-const appRoutes: Routes = [
-{  path: 'play-pool', component: PlayPoolComponent, },
-{  path: 'recipes', component: RecipesComponent, },
-{  path: 'recipes/:id', component: RecipeDetailComponent, },
-{  path: 'recipes/:id/:name', component: RecipeCommentComponent, },
-{  path: 'recipes/:id/:name/:rating', component: RecipeCommentComponent, },
-{  path: 'single-comment', component: SingleCommentComponent, },
-{  path: 'shopping-list', component: ShoppingListComponent, }
+// const appRoutes: Routes = [
+// {  path: 'play-pool', component: PlayPoolComponent, },
+// {  path: 'recipes', component: RecipesComponent, },
+// {  path: 'recipes/:id', component: RecipeDetailComponent, },
+// {  path: 'recipes/:id/:name', component: RecipeCommentComponent, },
+// {  path: 'recipes/:id/:name/:rating', component: RecipeCommentComponent, },
+// {  path: 'single-comment', component: SingleCommentComponent, },
+// {  path: 'shopping-list', component: ShoppingListComponent, },
 
-];
+
+// { path: 'not-found', component: PageNotFoundComponent, },
+// { path: '**', redirectTo: 'not-found', }
+// ];
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,14 +58,13 @@ const appRoutes: Routes = [
     AccountComponent,
     RecipeCommentComponent,
     SingleCommentComponent,
+    PageNotFoundComponent,
    ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(
-      appRoutes
-    )
+    AppRoutingModule,
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]

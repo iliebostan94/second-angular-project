@@ -58,7 +58,7 @@
 <p>User {{ user.name }} rated with {{ user.rating }} stars this recipe</p>
             </li> -->
             <a 
-            [routerLink]="['/recipes', id, user.name, user.rating]" routerLinkActive="router-link-active"
+            [routerLink]="['/recipes', user.id, user.name, user.rating]" routerLinkActive="router-link-active"
             href="#"
             class="list-group-item"
             *ngFor = 'let user of users'>

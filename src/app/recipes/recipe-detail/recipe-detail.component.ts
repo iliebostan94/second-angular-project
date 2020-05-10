@@ -14,14 +14,17 @@ export class RecipeDetailComponent implements OnInit {
 
   users = [
     {
+      id: 1,
       name: 'Jenn',
       rating: 5
     },
     {
+      id: 2,
       name: 'Alex',
       rating: 4
     },
     {
+      id: 3,
       name: 'Tania',
       rating: 5
     },
