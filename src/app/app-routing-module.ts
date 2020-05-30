@@ -7,11 +7,19 @@ import { RecipeCommentComponent } from './recipes/recipe-detail/recipe-comment/r
 import { SingleCommentComponent } from './recipes/recipe-detail/recipe-comment/single-comment/single-comment.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { RecipesStartComponent } from './recipes/recipes-start/recipes-start.component';
 
 
 const appRoutes: Routes = [
+    {  path: '', redirectTo: '/recipes', pathMatch: 'full' }, // this one works as a home page
     {  path: 'play-pool', component: PlayPoolComponent, },
-    {  path: 'recipes', component: RecipesComponent, },
+    // {  path: 'recipes', component: RecipesComponent, children: [
+    //     {  path: '', component: RecipesStartComponent },
+    //     {  path: ':id', component: RecipeDetailComponent, },
+    //     {  path: ':id/:name', component: RecipeCommentComponent, },
+    //     {  path: ':id/:name/:rating', component: RecipeCommentComponent, },
+    // ]},
+    {  path: 'recipes', component: RecipesComponent },
     {  path: 'recipes/:id', component: RecipeDetailComponent, },
     {  path: 'recipes/:id/:name', component: RecipeCommentComponent, },
     {  path: 'recipes/:id/:name/:rating', component: RecipeCommentComponent, },
@@ -20,12 +28,14 @@ const appRoutes: Routes = [
 
 
     { path: 'not-found', component: PageNotFoundComponent, },
-    { path: '**', redirectTo: 'not-found', }
+    { path: '**', redirectTo: 'not-found', },
+
     ];
 
 @NgModule({
    imports: [
-       RouterModule.forRoot( appRoutes )
+     RouterModule.forRoot( appRoutes, {useHash: true} )
+    //    RouterModule.forRoot( appRoutes )
    ],
    exports: [RouterModule]
 })
