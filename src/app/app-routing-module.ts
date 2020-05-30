@@ -7,7 +7,6 @@ import { RecipeCommentComponent } from './recipes/recipe-detail/recipe-comment/r
 import { SingleCommentComponent } from './recipes/recipe-detail/recipe-comment/single-comment/single-comment.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { RecipesStartComponent } from './recipes/recipes-start/recipes-start.component';
 
 
 const appRoutes: Routes = [

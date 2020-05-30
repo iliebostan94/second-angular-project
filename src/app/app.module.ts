@@ -24,7 +24,6 @@ import { RecipeCommentComponent } from './recipes/recipe-detail/recipe-comment/r
 import { SingleCommentComponent } from './recipes/recipe-detail/recipe-comment/single-comment/single-comment.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AppRoutingModule } from './app-routing-module';
-import { RecipesStartComponent } from './recipes/recipes-start/recipes-start.component';
 
 // const appRoutes: Routes = [
 // {  path: 'play-pool', component: PlayPoolComponent, },
@@ -59,8 +58,7 @@ import { RecipesStartComponent } from './recipes/recipes-start/recipes-start.com
     AccountComponent,
     RecipeCommentComponent,
     SingleCommentComponent,
-    PageNotFoundComponent,
-    RecipesStartComponent,
+    PageNotFoundComponent
    ],
   imports: [
     BrowserModule,
